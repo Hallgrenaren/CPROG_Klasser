@@ -17,7 +17,7 @@ void Compound::addFigure(Figure* f) {
 }
 
 int Compound::getSumOfCorners() {
-    double sum = 0;
+    int sum = 0;
     for(Figure* fig: vec){
         if(CorneredFigure* cfig = dynamic_cast<CorneredFigure*>(fig)){
             sum += cfig->getCorners();
