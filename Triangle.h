@@ -9,8 +9,12 @@
 
 class Triangle : public CorneredFigure{
 public:
-    double getArea();
-    int getCorners(){return 3;};
+    // Don't leave out override when overriding. It's not just style. It's rather important.
+    double getArea() override;
+
+    // Never override a virtual method using an inline. The pointer is needed anyway so nothing
+    // is gained by declaring it in the header.
+    int getCorners() override;
     static Triangle* create(int h, int b);
 private:
     Triangle(int h, int b);

@@ -12,7 +12,11 @@ Triangle::Triangle(int h, int b) : CorneredFigure("Triangle"), h(h), b(b) {
 
 }
 
-double Triangle::getArea() {
-    return ((b*h)/2);
+int Triangle::getCorners() {
+    return 3;
 }
 
+double Triangle::getArea() {
+    // Cast result of multiplication to a double and divide with a double to avoid loss of precision
+    return double(b*h)/2.0;
+}
