@@ -12,12 +12,13 @@
 class Compound : public Figure{
 public:
     static Compound* create(std::string n);
-    double getArea();
+    // Remember override
+    double getArea() override;
     void addFigure(Figure *f);
     int getSumOfCorners();
     //~Compound(); tänkte ha en destruktor för att ta bort alla figurer som är i denna, men står inte i uppgiften, så skitsamma
 private:
-    Compound(std::string n);
+    explicit Compound(std::string n);
     std::vector<Figure*> vec;
     std::string name;
 };

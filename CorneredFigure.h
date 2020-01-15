@@ -10,7 +10,8 @@
 
 class CorneredFigure : public Figure{
 public:
-    virtual double getArea() = 0;
+    // Remove unnecessary repeat of pure virtual getArea() (it's in the super class)
+    // virtual double getArea() = 0;
     virtual int getCorners() = 0;
 protected:
     explicit CorneredFigure(std::string n): Figure(n){};
